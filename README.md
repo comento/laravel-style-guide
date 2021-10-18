@@ -22,9 +22,9 @@
 ### 다른 곳에서 공유하는 스타일 가이드
 - [Spatie Laravel & PHP Style Guide](https://github.com/spatie/guidelines.spatie.be/blob/master/content/code-style/laravel-php.md#typed-properties)
 - [OP.GG 스타일 가이드](https://github.com/opgginc/styleguide/blob/master/laravel.md)
+- [ESC Company 가이드](https://helloworld.holapet.com/php-coding-guidelines)
 
 ### 읽어보면 좋은 문서
 - [PHP The Right Way](http://modernpug.github.io/php-the-right-way/)
-- [PHP, 잘못된 디자인의 프랙탈](https://php-a-fractal-of-bad-design-kr.github.io/)
 - 공식 [Laravel 문서](https://laravel.com/docs/)
 - 한글 [Laravel 문서](https://laravel.kr/docs/)
