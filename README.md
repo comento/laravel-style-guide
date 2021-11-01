@@ -17,6 +17,20 @@
 
 ## 컨벤션
 
+### Json Response
+- json response는 `response()->json()` 형태를 사용합니다.
+- status code는 직관성을 위해 위해 `JsonResponse`를 사용합니다.
+
+```php
+return response()->json(
+    [
+        'message' => 'ok',
+        'data' => $data,
+    ],
+    JsonResponse::HTTP_OK
+);
+```
+
 ## 참조
 
 ### 다른 곳에서 공유하는 스타일 가이드
