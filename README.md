@@ -17,6 +17,16 @@
 
 ## 컨벤션
 
+### Early returns
+- 예측가능하고 제어가 가능한 예외사항은 `throw` 대신에 `early return`을 사용한다.
+- 최대한 `else`의 사용을 피한다.
+
+```php
+if (! $CONDITION) {
+    return;
+}
+```
+
 ### Json Response
 - json response는 `response()->json()` 형태를 사용합니다.
 - status code는 직관성을 위해 위해 `JsonResponse`를 사용합니다.
