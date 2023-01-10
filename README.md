@@ -17,6 +17,17 @@
 
 ## 컨벤션
 
+### Routing
+
+- 라우트 정의는 컨트롤러와 메소드를 이용합니다.
+- 컨트롤러를 입력할 때는 전체 경로를 입력하지 않고 `use`를 사용합니다.
+
+```php
+use App\Http\Controllers\UserController;
+ 
+Route::get('/user', [UserController::class, 'index']);
+```
+
 ### Json Response
 - json response는 `response()->json()` 형태를 사용합니다.
 - status code는 직관성을 위해 위해 `JsonResponse`를 사용합니다.
