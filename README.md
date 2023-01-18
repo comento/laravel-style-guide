@@ -30,10 +30,10 @@ Route::get('/user', [UserController::class, 'index']);
 
 ### Validation
 
-- Validation은 `Validator::make`를 사용한다.
-  - Form Request를 사용하지 않는 이유는 현재 잘 사용하기 위한 정책이 아직 마련되지 않았기 때문이다.
-  - 그리고 유지보수 측면으로도 컨트롤러에서 확인하는게 더 빠르기 때문이다.
-- `Valitator::make` 아래에는 `fails()` 를 이용해서 early return을 한다.
+- Validation은 `Validator::make`를 사용합니다.
+  - Form Request를 사용하지 않는 이유는 현재 잘 사용하기 위한 정책이 아직 마련되지 않았기 때문입니다.
+  - 그리고 유지보수 측면으로도 컨트롤러에서 확인하는게 더 빠르기 때문입니다.
+- `Valitator::make` 아래에는 `fails()` 를 이용해서 early return을 합니다.
 
 ```php
 $validator = Validator::make($request->all(), [
