@@ -9,8 +9,8 @@
 ## 들어가기
 
 ### 환경
-- PHP 7.4
-- Laravel 7.x
+- PHP 8.0
+- Laravel 8.x
 
 ### 기본 규칙
 - 기본적인 규칙은 [PSR-12](https://www.php-fig.org/psr/psr-12) 를 적용합니다.
@@ -47,7 +47,7 @@ return response()->json(
 ### 다른 곳에서 공유하는 스타일 가이드
 - [Spatie Laravel & PHP Style Guide](https://github.com/spatie/guidelines.spatie.be/blob/master/content/code-style/laravel-php.md#typed-properties)
 - [OP.GG 스타일 가이드](https://github.com/opgginc/styleguide/blob/master/laravel.md)
-- [ESC Company 가이드](https://helloworld.holapet.com/php-coding-guidelines)
+- ~~[ESC Company 가이드](https://helloworld.holapet.com/php-coding-guidelines)~~
 
 ### 읽어보면 좋은 문서
 - [PHP The Right Way](http://modernpug.github.io/php-the-right-way/)
