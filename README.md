@@ -28,6 +28,13 @@ use App\Http\Controllers\UserController;
 Route::get('/user', [UserController::class, 'index']);
 ```
 
+### Route URI Naming
+
+- 다음의 일관성을 지킵니다.
+  - 가독성을 위한 하이픈(-)을 사용합니다.
+  - 밑줄 (_)은 사용하지 않습니다.
+  - 소문자를 사용합니다.
+
 ### Validation
 
 - Validation은 `Validator::make`를 사용합니다.
