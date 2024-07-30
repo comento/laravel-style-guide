@@ -4,6 +4,7 @@
 
 ## 목차
 - [들어가기](#들어가기)
+- [컨벤션](#컨벤션)
 - [참조](#참조)
 
 ## 들어가기
@@ -28,12 +29,45 @@ use App\Http\Controllers\UserController;
 Route::get('/user', [UserController::class, 'index']);
 ```
 
+- Route URI의 구조가 Controller 이름, Method가 되도록 구성합니다.
+
+```php
+Route::prefix('coupon')->group(function () {
+    Route::post('/download/code', [CouponController::class, 'downloadCode']);
+})
+
+// 제품 단위가 클 경우 Controller를 세부 단위까지 분리해서 작성합니다.
+Route::prefix('vod')->group(function () {
+    Route::post('check/paid', [VodCheckController::class, 'paid']);
+    // ...
+  
+    Route::post('note/list', [VodNoteController::class, 'list']);
+    // ...
+}
+```
+
 ### Route URI Naming
 
 - 다음의 일관성을 지킵니다.
   - 가독성을 위한 하이픈(-)을 사용합니다.
   - 밑줄 (_)은 사용하지 않습니다.
   - 소문자를 사용합니다.
+
+### Route Structure
+
+- 제품 단위가 커지면 파일을 분리합니다.
+- 분리한 파일은 routes/resources 폴더에 저장합니다.
+```php
+// before
+Route::prefix('vod')->middleware(['auth.jwt'])->group(function () {
+    // ...
+});
+
+// after
+Route::prefix('vod')->middleware(['auth.jwt'])->group(
+    base_path('routes/resources/vod.php'),
+);
+```
 
 ### Validation
 
