@@ -11,7 +11,7 @@
 
 ### 환경
 - PHP 8.0
-- Laravel 8.x
+- Laravel 10.x
 
 ### 기본 규칙
 - 기본적인 규칙은 [PSR-12](https://www.php-fig.org/psr/psr-12) 를 적용합니다.
