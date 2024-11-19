@@ -10,8 +10,8 @@
 ## 들어가기
 
 ### 환경
-- PHP 8.0
-- Laravel 8.x
+- PHP 8.3
+- Laravel 10.x
 
 ### 기본 규칙
 - 기본적인 규칙은 [PSR-12](https://www.php-fig.org/psr/psr-12) 를 적용합니다.
@@ -49,7 +49,7 @@ Route::prefix('vod')->group(function () {
 ### Route URI Naming
 
 - 다음의 일관성을 지킵니다.
-  - 가독성을 위한 하이픈(-)을 사용합니다.
+  - 케밥 케이스(kebab-case)로 작성: 가독성을 위해 하이픈(-)을 사용합니다.
   - 밑줄 (_)은 사용하지 않습니다.
   - 소문자를 사용합니다.
 
