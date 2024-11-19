@@ -101,6 +101,16 @@ return response()->json(
 );
 ```
 
+## Laravel Pint 적용하기
+
+### 설치
+```
+composer require laravel/pint --dev
+```
+
+### Pint.json 파일 및 설정법
+- [Laravel Pint 적용하기](https://www.notion.so/comento/Laravel-Pint-c34ad012fa1544caa1c09f4c2b9d12c0?pvs=4)
+
 ## 참조
 
 ### 다른 곳에서 공유하는 스타일 가이드
