@@ -22,11 +22,14 @@
 
 - 라우트 정의는 컨트롤러와 메소드를 이용합니다.
 - 컨트롤러를 입력할 때는 전체 경로를 입력하지 않고 `use`를 사용합니다.
+- 컨트롤러의 이름이 동일하거나, 제품의 폴더 안에 들어가 있어 단순해진 이름으로 인해 오해의 소지가 있을 경우에는 `as` 를 사용해서 클래스의 성격 및 용도를 명확하게 해서 사용합니다.
 
 ```php
 use App\Http\Controllers\UserController;
- 
+use App\Http\Controllers\Api\Jwt\V2\EduCamp\LiveClassController as EduLiveClassController;
+
 Route::get('/user', [UserController::class, 'index']);
+Route::post('ready/{eduCamp}', [EduLiveClassController::class, 'readyToLiveClass']);
 ```
 
 - Route URI의 구조가 Controller 이름, Method가 되도록 구성합니다.
