@@ -111,8 +111,11 @@ return response()->json(
 composer require laravel/pint --dev
 ```
 
-### Pint.json 파일 및 설정법
-- [Laravel Pint 적용하기](https://www.notion.so/comento/Laravel-Pint-c34ad012fa1544caa1c09f4c2b9d12c0?pvs=4)
+### Pint.json 파일
+- [pint.json 받기](resource/pint.json)
+
+### 설정하기
+- Phpstorm 또는 사용하고 있는 IDE의 Laravel Pint 관련 설정에서 pint.json 파일 경로를 지정해준다.
 
 ## 참조
 
