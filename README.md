@@ -74,20 +74,25 @@ Route::prefix('vod')->middleware(['auth.jwt'])->group(
 
 ### Validation
 
-- Validation은 `Validator::make`를 사용합니다.
+- Validation은 `Validator::validate()`를 사용합니다.
   - Form Request를 사용하지 않는 이유는 현재 잘 사용하기 위한 정책이 아직 마련되지 않았기 때문입니다.
   - 그리고 유지보수 측면으로도 컨트롤러에서 확인하는게 더 빠르기 때문입니다.
-- `Valitator::make` 아래에는 `fails()` 를 이용해서 early return을 합니다.
+- `Valitator::validate()` 는 try/catch 밖에서 사용합니다.
+- Validation Rules 사용은 `|` 대신에 array를 지향합니다.
+- Validation Rules를 사용할때 유형성 검사 실패 후 중지를 하기 위해 `bail`을 사용합니다.
 
 ```php
-$validator = Validator::make($request->all(), [
-    'title' => 'required|unique:posts|max:255',
-    'body' => 'required',
+$validator = Validator::validate($request->all(), [
+    'email' => [
+        'bail', 
+        'required', 
+        Rule::exists('staff')->where(function (Builder $query) {
+            $query->where('account_id', 1)
+        })
+    ]
+    'title' => ['bail', 'required', 'unique:posts', 'max:255'],
+    'start_date' => ['required', Rule::date()->afterToday(today()->addDays(7))]
 ]);
-
-if ($validator->fails()) {
-
-}
 ```
 
 ### Json Response
